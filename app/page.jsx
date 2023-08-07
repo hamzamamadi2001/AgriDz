@@ -118,7 +118,7 @@ function a11yProps(index) {
 
 
 
-export default function Home({ onStateChange }) {
+export default function Home() {
   const [value, setValue] = useState(0);
   const dispatch = useDispatch()
 
@@ -315,7 +315,7 @@ if(type=="الفواكه"){
       setChecked7(false);
       setChecked2(true);
       setChecked3(false);
-      onStateChange("نشر عمل");
+      
       dispatch(changeTheName({ name: "نشر عمل", numm: 2 }))
 
     }
