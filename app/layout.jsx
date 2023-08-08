@@ -7,6 +7,8 @@ import Provider from "../components/provider"
 import Login from "../components/login"
 import Main from "../components/MainCard"
 import   { SWRConfig } from 'swr'
+import Head from "next/head";
+
 import Link from 'next/link';
 import { changeTheName } from '@/slices/CounterSlice';
 const inter = Cairo({ subsets: ['latin'] })
@@ -21,7 +23,11 @@ export default function RootLayout({
 }) {
   return (
     <html className='w-screen' lang="en" dir='rtl'>
-    
+     <Head>
+          <link rel="manifest" href="/manifest.json" />
+          <link rel="apple-touch-icon" href="/icon-192x192.png" />
+          <meta name="theme-color" content="#042940" />
+        </Head>
       <body className={inter.className}>
     
 <Provider>
