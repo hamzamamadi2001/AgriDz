@@ -23,11 +23,11 @@ export default function RootLayout({
 }) {
   return (
     <html className='w-screen' lang="en" dir='rtl'>
-     <Head>
+     <head>
           <link rel="manifest" href="/manifest.json" />
           <link rel="apple-touch-icon" href="/icon-192x192.png" />
           <meta name="theme-color" content="#042940" />
-        </Head>
+        </head>
       <body className={inter.className}>
     
 <Provider>
