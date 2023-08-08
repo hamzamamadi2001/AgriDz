@@ -33,7 +33,7 @@ export default function RootLayout({
 <Provider>
         {children}
 
-        <section className="m-0 w-full h-10 flex justify-center items-center gap-2  bg-black sticky md:hidden bottom-0 z-50">
+        <section className="m-0 w-full h-10 flex justify-center items-center gap-2  bg-black fixed md:hidden bottom-0 z-50">
 
 
           <div style={{ borderRadius: "100%" }} className="absolute bg-yellow-500 w-20 h-20  bottom-2 cursor-pointer   flex justify-center items-center">

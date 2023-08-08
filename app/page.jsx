@@ -263,7 +263,7 @@ if(type=="الفواكه"){
               }
  
 }, [type]);
-  const { data, error, isLoading, isValidating, mutate} = useSWR(`https://agri-dz.vercel.app/api/get_product?wilaya=${selectedWilaya}&type=${type}&name=${officalname}`)
+  const { data, error, isLoading, isValidating, mutate} = useSWR(`http://localhost:3000/api/get_product?wilaya=${selectedWilaya}&type=${type}&name=${officalname}`)
   console.log(data)
   
 
