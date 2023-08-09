@@ -285,11 +285,11 @@ if(type=="الفواكه"){
   function handelTabHamza(num1, num2, num3, num4, num5, num6, num7) {
     document.getElementById(num1).style.backgroundColor = "white"
     document.getElementById(num2).style.backgroundColor = "orange"
-    document.getElementById(num3).style.backgroundColor = "orange"
+    // document.getElementById(num3).style.backgroundColor = "orange"
     document.getElementById(num4).style.backgroundColor = "orange"
     document.getElementById(num5).style.backgroundColor = "orange"
     document.getElementById(num6).style.backgroundColor = "orange"
-    document.getElementById(num7).style.backgroundColor = "orange"
+    // document.getElementById(num7).style.backgroundColor = "orange"
 
 
     if (num1 == "1") {
@@ -299,7 +299,8 @@ if(type=="الفواكه"){
       setChecked3(false);
       setChecked4(false);
       setChecked5(false);
-      setChecked6(false);
+      setChecked6(false);6
+      65
       setChecked7(false);
       dispatch(changeTheName({ name: "نشر منتوج", numm: 1 }))
 
@@ -314,25 +315,11 @@ if(type=="الفواكه"){
       setChecked6(false);
       setChecked7(false);
       setChecked2(true);
-      setChecked3(false);
-      
+       
       dispatch(changeTheName({ name: "نشر عمل", numm: 2 }))
 
     }
-    if (num1 == "3") {
-      console.log("iam here2")
-      setTitle("نشر سؤال")
-
-      setChecked1(false);
-      setChecked4(false);
-      setChecked5(false);
-      setChecked6(false);
-      setChecked7(false);
-      setChecked2(false);
-      setChecked3(true);
-      dispatch(changeTheName({ name: "نشر سؤال", numm: 3 }))
-
-    }
+   
 
     if (num1 == "4") {
       console.log("iam here2")
@@ -341,7 +328,6 @@ if(type=="الفواكه"){
       setChecked1(false);
 
       setChecked2(false);
-      setChecked3(false);
       setChecked5(false);
       setChecked6(false);
       setChecked7(false);
@@ -634,24 +620,25 @@ if(type=="الفواكه"){
       </div>
 
 
-      <section className="flex justify-center items-center flex-wrap gap-2 bg-white w-screen">
-        <div id="1" onClick={() => (handelTabHamza('1', "2", "3", "4", "5", "6", "7"))} className="bg-white cursor-pointer px-3    flex-col    rounded-t-lg    flex justify-center items-center border-2 border-orange-500">
+      <section className="flex justify-evenly items-start flex-wrap gap-2 bg-white w-screen">
+        <div id="1" onClick={() => (handelTabHamza('1', "2", "3", "4", "5", "6", "7"))} className="bg-white cursor-pointer px-1    flex-col    rounded-t-lg    flex justify-center items-center border-2 border-orange-500">
+        <div className='relative w-10 h-10'>
 
-          <Image src="/product.png" width={50} height={50}></Image>
+          <Image src="/product.png" fill></Image>
+</div>
 
-
-          <p className="font-bold text-base">منتوجات فلاحية</p>
-
-        </div>
-        <div id="6" onClick={() => (handelTabHamza("6", '1', "2", "3", "4", "5", "7"))} className="bg-orange-400 cursor-pointer px-3    flex-col    rounded-t-lg    flex justify-center items-center border-2 border-orange-500">
-
-          <Image src="/cow.png" width={50} height={50}></Image>
-
-
-          <p className="font-bold text-base">مواشي و مشتقاتها</p>
+          <p className="font-bold text-sm md:text-base">منتوجات فلاحية</p>
 
         </div>
+        <div id="6" onClick={() => (handelTabHamza("6", '1', "2", "3", "4", "5", "7"))} className="bg-orange-400 cursor-pointer px-1    flex-col    rounded-t-lg    flex justify-center items-center border-2 border-orange-500">
+        <div className='relative w-10 h-10'>
+          <Image src="/cow.png" fill></Image>
+</div>
 
+          <p className="font-bold md:text-base text-sm">مواشي و اعنام</p>
+
+        </div>
+{/* 
         <div id="7" onClick={() => (handelTabHamza("7", '1', "2", "3", "4", "5", "6"))} className="bg-orange-400 cursor-pointer px-3    flex-col    rounded-t-lg    flex justify-center items-center border-2 border-orange-500">
 
           <Image src="/shipping.png" width={50} height={50}></Image>
@@ -659,29 +646,36 @@ if(type=="الفواكه"){
 
           <p className="font-bold text-base">خدمة النقل</p>
 
-        </div>
-        <div id="2" onClick={() => (handelTabHamza('2', "1", "3", "4", "5", "6", "7"))} className="bg-orange-400 cursor-pointer   px-3  flex-col     rounded-t-lg   flex justify-center items-center   border-2 border-orange-500">
-          <Image src="/job.png" width={50} height={50}></Image>
+        </div> */}
+        <div id="2" onClick={() => (handelTabHamza('2', "1", "3", "4", "5", "6", "7"))} className="bg-orange-400 cursor-pointer   px-1  flex-col     rounded-t-lg   flex justify-center items-center   border-2 border-orange-500">
+         <div className='relative w-10 h-10'>
+           <Image src="/job.png" fill></Image>
+         </div>
+         
 
           <p className="font-bold text-base">عروض العمل</p>
 
         </div>
-        <div id="3" onClick={() => (handelTabHamza('3', "1", "2", "4", "5", "6", "7"))} className="bg-orange-400 cursor-pointer   px-3  flex-col    rounded-t-lg   flex justify-center items-center border-2 border-orange-500">
+        {/* <div id="3" onClick={() => (handelTabHamza('3', "1", "2", "4", "5", "6", "7"))} className="bg-orange-400 cursor-pointer   px-3  flex-col    rounded-t-lg   flex justify-center items-center border-2 border-orange-500">
           <Image src="/question.png" width={50} height={50}></Image>
 
           <p className="font-bold text-base">اسئلة الفلاحين</p>
 
+        </div> */}
+        <div id="4" onClick={() => (handelTabHamza('4', "1", "2", "3", "5", "6", "7"))} className="bg-orange-400 cursor-pointer   px-1  flex-col    rounded-t-lg   flex justify-center items-center border-2 border-orange-500">
+        <div className='relative w-10 h-10'>
+         
+          <Image src="/tractor.png" fill></Image>
+</div>
+          <p className="font-bold text-sm md:text-base">كراء وبيع العتاد</p>
+
         </div>
-        <div id="4" onClick={() => (handelTabHamza('4', "1", "2", "3", "5", "6", "7"))} className="bg-orange-400 cursor-pointer   px-3  flex-col    rounded-t-lg   flex justify-center items-center border-2 border-orange-500">
-          <Image src="/tractor.png" width={50} height={50}></Image>
-
-          <p className="font-bold text-base">كراء وبيع العتاد</p>
-
-        </div>
-        <div id="5" onClick={() => (handelTabHamza('5', "1", "2", "3", "4", "6", "7"))} className="bg-orange-400 cursor-pointer   px-3  flex-col    rounded-t-lg   flex justify-center items-center border-2 border-orange-500">
-          <Image src="/fields.png" width={50} height={50}></Image>
-
-          <p className="font-bold text-base">كراء و بيع عقار</p>
+        <div id="5" onClick={() => (handelTabHamza('5', "1", "2", "3", "4", "6", "7"))} className="bg-orange-400 cursor-pointer   px-1  flex-col    rounded-t-lg   flex justify-center items-center border-2 border-orange-500">
+        <div className='relative w-10 h-10'>
+          
+          <Image src="/fields.png" fill></Image>
+</div>
+          <p className="font-bold text-sm md:text-base">كراء و بيع عقار</p>
 
         </div>
 
@@ -812,7 +806,7 @@ if(type=="الفواكه"){
             </div>
           </div>
 
-          <div className="w-full p-5 flex justify-center items-center gap-5 flex-wrap">
+          <div className="w-full p-1 flex justify-center items-center gap-5 flex-wrap">
             {!isLoading&&data?.map((res, index) => {
 
               return (
@@ -989,14 +983,14 @@ if(type=="الفواكه"){
         </Carousel>
       </div>
       <div className='flex flex-col justify-start items-start'>
-      <div className='flex justify-center gap-2 items-center flex-row'> <p className='text-black font-bold text-lg'>اسم المنتوج:{!isLoading&&data.length>0&&data[indexx].name} </p> </div>
-      <div className='flex justify-center gap-5 items-center flex-row'> <p className='text-black font-bold text-xl'>نوع المنتوج:{!isLoading&&data.length>0&&data[indexx].type} </p> </div>
-      <div className='flex justify-center gap-5 items-center flex-row'> <p className='text-black font-bold text-xl'>السعر:{!isLoading&&data.length>0&&data[indexx].price} </p> </div>
-      <div className='flex justify-center gap-5 items-center flex-row'> <p className='text-black font-bold text-xl'>حالة النتموج:{!isLoading&&data.length>0&&data[indexx].ready} </p> </div>
-      <div className='flex justify-center gap-5 items-center flex-row'> <p className='text-black font-bold text-xl'>الكمية/المساحة:{!isLoading&&data.length>0&&data[indexx].quantity} </p> </div>
-      <div className='flex justify-center gap-5 items-center flex-row'> <p className='text-black font-bold text-xl'>المناقشة:{!isLoading&&data.length>0&&data[indexx].discuss} </p> </div>
+      <div className='flex justify-center gap-2 items-center flex-row'> <p className='text-black font-bold text-lg'>اسم المنتوج:{!isLoading&&data?.length>0&&data[indexx].name} </p> </div>
+      <div className='flex justify-center gap-5 items-center flex-row'> <p className='text-black font-bold text-xl'>نوع المنتوج:{!isLoading&&data?.length>0&&data[indexx].type} </p> </div>
+      <div className='flex justify-center gap-5 items-center flex-row'> <p className='text-black font-bold text-xl'>السعر:{!isLoading&&data?.length>0&&data[indexx].price} </p> </div>
+      <div className='flex justify-center gap-5 items-center flex-row'> <p className='text-black font-bold text-xl'>حالة النتموج:{!isLoading&&data?.length>0&&data[indexx].ready} </p> </div>
+      <div className='flex justify-center gap-5 items-center flex-row'> <p className='text-black font-bold text-xl'>الكمية/المساحة:{!isLoading&&data?.length>0&&data[indexx].quantity} </p> </div>
+      <div className='flex justify-center gap-5 items-center flex-row'> <p className='text-black font-bold text-xl'>المناقشة:{!isLoading&&data?.length>0&&data[indexx].discuss} </p> </div>
     </div>  
-    {!isLoading&&data.length>0&&data[indexx].phone.map((num,index)=>{
+    {!isLoading&&data?.length>0&&data[indexx].phone.map((num,index)=>{
           return(
             <div className=" w-full bg-orange-600">
             <p>{num}</p>

@@ -49,8 +49,8 @@ function CardCat({ src, name, wilaya ,ready}) {
             <Image src={src} fill className='rounded-t-lg'></Image>
          </div>
          <div className='w-full justify-center items-center flex flex-col'>
-            <div className='flex justify-center gap-5 items-center flex-row'><div className='flex justify-center items-center'><ImLocation size={20} color='red'></ImLocation><p className='text-orange-800 font-bold text-xl'>{wilaya}</p></div> <p className='text-green-800 font-bold text-xl'>{name}</p> </div>
-            <div className='flex justify-center gap-5 items-center flex-row'> <p className='text-green-500 font-bold text-xl'>{ready}</p> </div>
+            <div className='flex justify-center gap-5 items-center flex-row'><div className='flex justify-center items-center'><ImLocation size={20} color='red'></ImLocation><p className='text-sm text-orange-800 font-bold md:text-xl'>{wilaya}</p></div> <p className='text-sm text-green-800 font-bold md:text-xl'>{name}</p> </div>
+            <div className='flex justify-center gap-5 items-center flex-row'> <p className='text-green-500 font-bold md:text-xl text-sm'>{ready}</p> </div>
 
 
          </div>
