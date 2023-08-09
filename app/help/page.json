@@ -1,0 +1,8 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "app.vercel.agri_dz.twa",
+    "sha256_cert_fingerprints": ["19:37:8D:37:07:42:C4:CE:90:8A:43:A5:6B:11:7D:D7:DB:C0:46:03:1E:32:DD:BD:72:3F:63:89:C9:BF:20:95"]
+  }
+}]
