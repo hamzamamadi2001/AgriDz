@@ -263,7 +263,7 @@ if(type=="الفواكه"){
               }
  
 }, [type]);
-  const { data, error, isLoading, isValidating, mutate} = useSWR(`https://agri-dz.vercel.app/api/get_product?wilaya=${selectedWilaya}&type=${type}&name=${officalname}`)
+  const { data, error, isLoading, isValidating, mutate} = useSWR(`http://localhost:3000/api/get_product?wilaya=${selectedWilaya}&type=${type}&name=${officalname}`)
   console.log(data)
   
 
@@ -972,10 +972,8 @@ if(type=="الفواكه"){
     </div>  
     {!isLoading&&data?.length>0&&data[indexx].phone.map((num,index)=>{
           return(
-            <div className=" p-3 fled justify-center items-center bg-orange-600">
-            <p className='text-center'>{num}</p>
-            <a href="tel:15555551235">+1 (555) 555-1234</a>
-
+            <div className=" p-3 fled justify-center items-center rounded-md bg-orange-600">
+            <a className='text-center' href={`tel:${num}`} >{num}</a>
           </div>
           )
         })}

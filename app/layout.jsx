@@ -37,8 +37,8 @@ export default function RootLayout({
 
 
           <div style={{ borderRadius: "100%" }} className="absolute bg-yellow-500 w-20 h-20  bottom-2 cursor-pointer   flex justify-center items-center">
-            <p className="font-bold text-black">نشر عرض</p>
-
+            
+            <Main></Main>
           </div>
 
         </section>
