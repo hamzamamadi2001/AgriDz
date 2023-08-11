@@ -742,9 +742,8 @@ const [wilaya, setWilaya] = useState([
             </Box>
           </Modal>
    
-    <div onClick={handleOpen} className=' w-48 bg-yellow-400 flex justify-center items-center flex-col rounded-md p-1 '>
-    <IoIosAddCircle size={30} color='black'></IoIosAddCircle>
-    <p className='text-white text-center text-2xl'>{name}and{num}</p>
+    <div onClick={handleOpen} className=' flex justify-center items-center flex-col rounded-md p-1 '>
+    <p className='text-white text-center text-sm'>{name}</p>
 
     
     </div> </>

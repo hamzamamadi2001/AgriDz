@@ -1,6 +1,5 @@
 import './globals.css'
 import { Cairo } from 'next/font/google'
-import { FaUserAlt } from 'react-icons/fa';
 import { AiFillHeart } from 'react-icons/ai';
 import { IoIosAddCircle } from 'react-icons/io';
 import Provider from "../components/provider"
@@ -8,6 +7,8 @@ import Login from "../components/login"
 import Main from "../components/MainCard"
 import   { SWRConfig } from 'swr'
 import Head from "next/head";
+
+import { FaUserAlt } from 'react-icons/fa';
 
 import Link from 'next/link';
 import { changeTheName } from '@/slices/CounterSlice';
@@ -33,14 +34,28 @@ export default function RootLayout({
 <Provider>
         {children}
 
-        <section className="m-0 w-full h-10 flex justify-center items-center gap-2  bg-black fixed md:hidden bottom-0 z-50">
+        <section className="m-0 w-full h-10 flex  justify-center items-center gap-5  bg-black fixed md:hidden bottom-0 z-50">
+<Link href="fav" className='w-11  bg-yellow-800 flex justify-center items-center flex-col '>
+<AiFillHeart  color='yellow' size={20}  ></AiFillHeart>
+<p className='text-white text-sm'>المفضلة</p>
+</Link>
+<div className='w-10'>
+
+</div>
 
 
           <div style={{ borderRadius: "100%" }} className="absolute bg-yellow-500 w-20 h-20  bottom-2 cursor-pointer   flex justify-center items-center">
-            
+       
             <Main></Main>
           </div>
+          <div className='w-10 h-10 '>
 
+</div>
+<Link href="/account" className='w-11 bg-yellow-800 flex justify-center items-center flex-col '>
+<FaUserAlt size={20} color='white'></FaUserAlt>
+
+<p className='text-white text-sm'>حسابي</p>
+</Link>
         </section>
 
         <section className="m-0 px-5 w-full bg-green-400  hidden justify-center items-center gap-2  fixed  md:flex top-0  z-50">
